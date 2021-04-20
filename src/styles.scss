@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #7474bf; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #348ac7,
+    #7474bf
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #348ac7,
+    #7474bf
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-principal {
+  height: 3.125rem;
+  background-color: rgb(51, 51, 51);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.titulo {
+  font-family: "Montserrat";
+}

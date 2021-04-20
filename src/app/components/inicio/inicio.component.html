@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    <strong>Por favor, ingrese PIN</strong>
+  </div>
+  <input
+    type="text"
+    class="form-control input-ingresar mb-3"
+    placeholder="Pin del juego"
+    [(ngModel)]="pin"
+  />
+
+  <button class="btn-ingresar btn-principal" (click)="ingresar()">
+    Ingresar
+  </button>
+</div>
+<div class="fixed-bottom">
+  <p class="text-center text">
+    Crea tu propio cuestionario GRATIS
+    <a class="link" routerLink="/usuario">aqui</a>
+  </p>
+</div>

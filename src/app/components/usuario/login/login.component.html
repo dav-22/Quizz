@@ -1,0 +1,75 @@
+<div class="container" class="mt-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center titulo">Login</h2>
+          <form [formGroup]="loginForm">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Correo"
+                formControlName="usuario"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  loginForm.get('usuario')?.hasError('required') &&
+                  loginForm.get('usuario')?.touched
+                "
+              >
+                El correo
+                <strong>es requerido</strong>
+              </span>
+              <span
+                class="text-danger"
+                *ngIf="
+                  loginForm.get('usuario')?.hasError('email') &&
+                  loginForm.get('usuario')?.touched
+                "
+              >
+                El correo
+                <strong>invalido</strong>
+              </span>
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control form-control-lg"
+                placeholder="Contraseña"
+                formControlName="password"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  loginForm.get('password')?.hasError('required') &&
+                  loginForm.get('password')?.touched
+                "
+              >
+                La contraseña
+                <strong>es requerida</strong>
+              </span>
+            </div>
+            <button class="btn btn-secondary btn-lg" routerLink="/">
+              Volver
+            </button>
+            <button
+              class="btn btn-primary btn-lg float-end"
+              (click)="login()"
+              [disabled]="loginForm.invalid"
+            >
+              Aceptar
+            </button>
+          </form>
+          <br />
+          <div class="text-center">
+            <a href="#">Registrarse</a>
+            <br />
+            <a href="#">Recuperar password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
